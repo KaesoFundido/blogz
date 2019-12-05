@@ -1,10 +1,12 @@
-#this contain your boilerplate
 <!DOCTYPE html>
 <html>
     <body>
         <nav>
-            <a href= "/blog/"><strong>Main Page</strong></a> |
-            <a href= "/newpost/"><strong>Create A New Blog Post</strong></a>
+            <a href= "/blog"><strong>Main Page</strong></a> |
+            <a href= "/newpost"><strong>Create A New Blog Post</strong></a>
+            <hr/>
         </nav>
+        {%block content%}
+        {%endblock%}
     </body>
 </html>

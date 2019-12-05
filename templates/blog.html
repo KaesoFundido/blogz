@@ -1,10 +1,13 @@
-<!DOCTYPE html>
-<html>
-    <body>
-        <style>
-        </style>
-        <form method= 'POST'>
-            #all of your if statements go here
-        </form>
-    </body>
-</html>
+{% extends "base.html" %}
+
+    {% block content %}
+    
+            {% for blog in blogs %}
+               <a href="./blog?id={{blog.id}}"><h1>{{blog.title}}</h1></a>
+                <p>{{blog.entry}}</p>
+            {% endfor %}
+            {% if singleblog is defined %}
+            <a href="./blog?id={{singleblog.id}}"><h1>{{singleblog.title}}</h1></a>
+                <p>{{singleblog.entry}}</p>
+            {% endif %}
+    {% endblock %}

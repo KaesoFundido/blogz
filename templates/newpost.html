@@ -1,13 +1,11 @@
-<!DOCTYPE html>
-<html>
-    <style>
-    </style>
-    <body>
-        <form>
-            Title: <input type="text" name="title">
-                <input type="submit">
-                <br>
-            <textarea rows="4" cols="50" name="entry"> Enter you test here...</textarea>
+{% extends "base.html" %}
+    {% block content %}
+        <form method = "POST" action= "/newpost">
+            Title: <input type="text" name="title" value ="{{title}}">
+            <br>
+            <br>
+            <textarea rows="4" cols="50" name="entry" placeholder="Enter Your Text Here...">{{entry}}</textarea>
+            <br>
+            <input type="submit" value="Submit Entry">
         </form>
-    </body>
-</html>
+    {% endblock %}
