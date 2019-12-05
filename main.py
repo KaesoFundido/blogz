@@ -5,7 +5,7 @@ import os
 
 app=Flask(__name__)
 app.config['DEBUG'] =True
-app.config['SQLALCHEMY_DATABASE_URI']='mysql+pymysql://build-a-blog:pass@localhost:8889/build-a-blog'
+app.config['SQLALCHEMY_DATABASE_URI']='mysql+pymysql://blogz:pass@localhost:8889/blogz'
 app.config['SQLALCHEMY_ECHO'] = True
 db= SQLAlchemy(app)
 
@@ -17,6 +17,15 @@ class blogpost(db.Model):
     def __init__(self, title, entry):
         self.title = title
         self.entry = entry
+
+class user(db.Model):
+    userid=
+    email=
+    password=
+
+    def__init__(self,email, password):
+    self.email=email
+    self.password=password
 
 @app.route('/', methods=['GET'])
 def index():
