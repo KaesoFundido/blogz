@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+    {% for blog in user.blogs %}
+    <a href="./blog?id={{blog.id}}"><h1>{{blog.title}}</h1></a>
+    <p>{{blog.entry}}</p>
+    <p>written by <a href= "./blog?user={{user.username}}">{{user.username}}</a></p>
+    {% endfor %}
+    {% if singleblog is defined %}
+    <a href="./blog?id={{singleblog.id}}"><h1>{{singleblog.title}}</h1></a>
+    <p>{{singleblog.entry}}</p>
+    <p>written by <a href= "./blog?user={{user.username}}">{{user.username}}</a></p>
+    {% endif %}
+    
+{% endblock %}

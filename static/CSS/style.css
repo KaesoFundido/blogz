@@ -1,0 +1,19 @@
+nav #user-account{
+
+    float: right;
+}
+
+nav ul {
+    padding: 0 ;
+    display: inline-block;
+}
+
+nav ul li{
+    list-style: none;
+    display: inline-block;
+    margin-right: 15px;
+}
+
+.error {
+    color: red;
+}

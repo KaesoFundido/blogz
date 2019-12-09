@@ -1,12 +1,25 @@
 <!DOCTYPE html>
 <html>
+    <head>
+        <title>Blogz</title>
+        <link rel="stylesheet" href="{{url_for('static', filename='CSS/style.css')}}" />
+    </head>
     <body>
         <nav>
-            <a href= "/blog"><strong>Main Page</strong></a> |
-            <a href= "/newpost"><strong>Create A New Blog Post</strong></a>
-            <a href="/blog"></a><strong>Log out</strong>
-            <hr/>
+            <ul id ="user-account">
+                <li><a href= "/login"><strong>Login</strong></a></li>
+                <li><a href= "/logout"><strong>Logout</strong></a></li>
+            </ul>
+
+            <ul>
+                <li><a href= "/"><strong>Home</strong></a></li> 
+                <li><a href= "/blog"><strong>All Posts</strong></a></li> 
+                <li><a href= "/newpost"><strong>Create New Post</strong></a></li>
+            </ul>
+
+           
         </nav>
+        <hr/>
         {%block content%}
         {%endblock%}
     </body>
